@@ -312,6 +312,8 @@ class RepoView:
         self.sout('Obtaining environment information')
         self.environments = dnfobj.get_environments()
 
+        self.setup_output()
+
         # package things
         self.sout('Obtaining all package information')
         self.sack_query = dnfobj.sack.query().available()
